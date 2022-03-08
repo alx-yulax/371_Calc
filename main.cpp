@@ -131,8 +131,8 @@ public:
     QGridLayout *gridLayout_2;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
-    QLineEditCalc *lineEdit_2;
     QLineEditCalc *lineEdit_1;
+    QLineEditCalc *lineEdit_2;
     QLineEdit *lineEdit_result;
     QHBoxLayout *horizontalLayout_2;
     QPushButton *pushButton_4;
@@ -177,7 +177,6 @@ public:
         font.setPointSize(14);
         lineEdit_2->setFont(font);
 
-        horizontalLayout->addWidget(lineEdit_2);
 
         lineEdit_1 = new QLineEditCalc(centralwidget);
         lineEdit_1->setObjectName(QString::fromUtf8("lineEdit_1"));
@@ -186,6 +185,7 @@ public:
         lineEdit_1->setFont(font);
 
         horizontalLayout->addWidget(lineEdit_1);
+        horizontalLayout->addWidget(lineEdit_2);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -403,7 +403,7 @@ int main(int argc, char *argv[]) {
     calc.setupUi(&window);
     window.lineEdit_1 = calc.lineEdit_1;
     window.lineEdit_2 = calc.lineEdit_2;
-    window.lineEditCurrent = calc.lineEdit_2;
+    window.lineEditCurrent = calc.lineEdit_1;
     window.lineEdit_result = calc.lineEdit_result;
 
 
