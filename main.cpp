@@ -92,7 +92,7 @@ public slots:
                 lineEdit_result->setText(QString::number(a - b));
             } else if (sign == Signs::mult) {
                 lineEdit_result->setText(QString::number(a * b));
-            } else if (sign == Signs::div && (a != 0.0) {
+            } else if ((sign == Signs::div) && (b != 0.0)) {
                 lineEdit_result->setText(QString::number(a / b));
             } else {
                 lineEdit_result->setText("ERROR");
